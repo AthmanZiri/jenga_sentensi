@@ -10,7 +10,7 @@ class Record(models.Model):
     # voice_record = models.FileField(
     #     upload_to="records", storage=RawMediaCloudinaryStorage())
     word = models.CharField(max_length=50, null=True, blank=True)
-    meaning = models.CharField(max_length=100, null=True, blank=True)
+    # meaning = models.CharField(max_length=100, null=True, blank=True)
     meaning_in_english = models.CharField(max_length=100, null=True, blank=True)
     meaning_in_swahili = models.CharField(max_length=100, null=True, blank=True)
     language = models.CharField(max_length=50, null=True, blank=True)

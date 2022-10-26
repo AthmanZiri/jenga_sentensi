@@ -43,13 +43,7 @@
           {% csrf_token %}
           <div class="field">
             <div class="control has-icons-left has-icons-right">
-              <input
-                class="input"
-                type="text"
-                placeholder="Language"
-                name="language"
-                id="language"
-              />
+              <input class="input" type="text" placeholder="Language" name="language" id="language"/>
               <span class="icon is-left">
                 <i class="fas fa-language"></i>
               </span>
@@ -57,11 +51,23 @@
                 <i class="fas fa-check"></i>
               </span>
             </div>
-            <div
-              class="control has-icons-left has-icons-right"
-              style="margin-top: 1rem"
-            >
+            <div class="control has-icons-left has-icons-right">
+              <input class="input" type="text" placeholder="Word" name="word" id="word"/>
+            </div>
+            <!-- <div class="control has-icons-left has-icons-right">
+              <input class="input" type="text" placeholder="Meaning" name="meaning" id="meaning"/>
+            </div> -->
+            <div class="control has-icons-left has-icons-right" style="margin-top: 1rem">
               <audio id="recordAudio" class="video-js vjs-default-skin"></audio>
+            </div>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input" type="text" placeholder="Meaning in English" name="meaning_in_english" id="meaning_in_english"/>
+            </div>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input" type="text" placeholder="Meaning in Swahili" name="meaning_in_swahili" id="meaning_in_swahili"/>
+            </div>
+            <div class="control has-icons-left has-icons-right" style="margin-top: 1rem">
+              <audio id="recordAudioUseCase" class="video-js vjs-default-skin"></audio>
             </div>
             <div class="control" style="margin-top: 1rem">
               <button class="button is-info" id="submit">Submit</button>

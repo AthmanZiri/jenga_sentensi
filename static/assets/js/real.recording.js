@@ -94,10 +94,22 @@ $("#submit").on("click", function (event) {
   //   grabs the value of the language field
   const language = document.getElementById("language").value;
   //   initializes an empty FormData
+  const word = document.getElementById("word").value;
+  //   initializes an empty FormData
+  const meaningEnglish = document.getElementById("meaning_in_english").value;
+  //   initializes an empty FormData
+  const meaningSwahili = document.getElementById("meaning_in_swahili").value;
+  //   initializes an empty FormData
+  const recordedFileUseCase = new File([player.recordedData], `audiorecord.webm`);
+  //   grabs the value of the language field
   let data = new FormData();
   //   appends the recorded file and language value
   data.append("recorded_audio", recordedFile);
   data.append("language", language);
+  data.append("word", word);
+  data.append("meaning_in_english", meaningEnglish);
+  data.append("meaning_in_swahili", meaningSwahili);
+  data.append("voice_record_use_case", recordedFileUseCase);
   //   post url endpoint
   const url = "";
   $.ajax({
